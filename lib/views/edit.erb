@@ -1,0 +1,22 @@
+
+<!-- Ce document est la page affichant le formulaire de création d'un potin -->
+<html>
+  <head>
+    <title>Modifier un potin</title>
+  </head>
+  <body>
+    <h1>Modifier un potin n°<%= params['id'] %></h1>
+    <p>Changer les infos du potin de <%= gossip.author %></p>
+    <p>Version d'origine: <br>
+      "<%= gossip.content %>" </p>
+    <p>
+      <form action='/gossips/edit/<%= params['id'] %>' method='POST'>
+        Nouvelle version : <br> 
+        <input type='textarea' name='gossip_content' placeholder="Potin"/><br/>
+        <br>
+        <input type='submit'/>
+      </form>
+    </p>
+
+  </body>
+</html>

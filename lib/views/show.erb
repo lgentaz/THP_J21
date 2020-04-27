@@ -1,13 +1,19 @@
+<!DOCTYPE html>
+<!-- Ce document est la page affichant ... -->
 <html>
   <head>
     <title>Page Potin</title>
   </head>
+  
   <body>
     <h1>Voici le potin n°<%= params['id'] %></h1>
-    <p> Son auteur : <%= gossip.author %><br/>
-		Le contenu du potin : "<%= gossip.content %>" <!-- <%= %> sert à afficher un string Ruby -->
+    <!-- <%= %> sert à afficher un string Ruby -->
+    <p> <%= gossip.author %> a écrit :<br/>
+    <br>
+      "<%= gossip.content %>" 
     </p>
+    <a href="/gossips/<%= params['id'] %>/edit/">Modifier</a><br>
+    <br>
     <a href="/">Lien pour revenir à la page principale</a>
-
   </body>
 </html>

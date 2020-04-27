@@ -1,15 +1,19 @@
+<!DOCTYPE html>
+<!-- Ce document est la page d'accueil du Gossip project -->
 <html>
   <head>
     <title>The Gossip Project</title>
   </head>
+
   <body>
-    <h1>Mon super site de gossip, depuis le dossier views !</h1>
-    <a href="/gossips/new/">Nouveau potin</a>
+    <h1>Bienvenue dans Gossip Project</h1>
+    <h3>Je veux créer un <a href="/gossips/new/">nouveau potin</a></h3>
+    <h3>Feed des potins:</h3>
     <% gossips.each_with_index do |gossip| %>
-        <p>
-			<%= gossip.author %><br/>
-			<%= gossip.content %> <!-- <%= %> sert à afficher un string Ruby -->
-        </p>
-	<% end %>
+      <p><%= gossip.author %> à écrit:<br/>
+		  "<%= gossip.content %>" <br/><!-- <%= %> sert à afficher un string Ruby -->
+      <a href="/gossips/<%= gossips.index(gossip) + 1 %>">Voir le potin</a>
+      </p>
+    <% end %>
   </body>
 </html>

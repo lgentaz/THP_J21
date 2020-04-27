@@ -1,13 +1,16 @@
+<!DOCTYPE html>
+<!-- Ce document est la page affichant le formulaire de création d'un potin -->
 <html>
   <head>
     <title>Créer un potin</title>
   </head>
+
   <body>
     <h1>Crée un potin !</h1>
     <p>Balance ton potin via le formulaire</p>
     <form action='/gossips/new/' method='POST'>
-      Ton nom :  <input type='text' name='gossip_author' placeholder="name" /><br/>
-      Balance ton potin : <input type='text' name='gossip_content' placeholder="potin"/><br/>
+      Ton nom :  <input type='text' name='gossip_author' placeholder="Pseudo" /><br/>
+      C'est quoi ton potin ? <input type='text' name='gossip_content' placeholder="Potin"/><br/>
       <input type='submit'/>
     </form>
   </body>
