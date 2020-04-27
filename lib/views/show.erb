@@ -7,13 +7,16 @@
   
   <body>
     <h1>Voici le potin n°<%= params['id'] %></h1>
-    <!-- <%= %> sert à afficher un string Ruby -->
+<!-- Affiche le potin -->
+<!-- <%= %> sert à afficher un string Ruby -->
     <p> <%= gossip.author %> a écrit :<br/>
     <br>
       "<%= gossip.content %>" 
     </p>
+<!-- Vers la page de modification -->
     <a href="/gossips/<%= params['id'] %>/edit/">Modifier</a><br>
     <br>
+<!-- Retour à l'accueil -->
     <a href="/">Lien pour revenir à la page principale</a>
   </body>
 </html>
