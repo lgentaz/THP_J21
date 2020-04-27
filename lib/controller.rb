@@ -14,4 +14,10 @@ class ApplicationController < Sinatra::Base
 		redirect '/' #redirige le navigateur vers la page d'accueil
 	end
 
+	get '/gossips/:id' do
+		id = params['id']
+		erb :new_gossip
+		erb :show, locals: {gossip: Gossip.find(id)}
+	end
+
 end

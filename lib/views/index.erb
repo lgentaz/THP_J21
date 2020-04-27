@@ -5,10 +5,10 @@
   <body>
     <h1>Mon super site de gossip, depuis le dossier views !</h1>
     <a href="/gossips/new/">Nouveau potin</a>
-    <% gossips.each do |gossip| %>
+    <% gossips.each_with_index do |gossip| %>
         <p>
 			<%= gossip.author %><br/>
-			<%= gossip.content %>
+			<%= gossip.content %> <!-- <%= %> sert à afficher un string Ruby -->
         </p>
 	<% end %>
   </body>

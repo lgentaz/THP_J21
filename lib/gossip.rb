@@ -24,4 +24,12 @@ class Gossip
 		end
 		return all_gossips
 	end
+
+	def self.find(id)
+		all_gossips = self.all
+		n = id.to_i
+		return all_gossips[n-1]
+		
+	end
+
 end
